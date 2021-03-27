@@ -7,7 +7,7 @@ import {db} from '../../util/firebase'
 function Feed() {
 
   const [product, setProduct] = useState("")
-  const langId = "Y4NkkstrdiMuOadb1wnT" //Do not fucking judge me
+  const langId = "Y4NkkstrdiMuOadb1wnT"
 
   useEffect(() => {
     db.collection("products").doc(langId).collection("products").onSnapshot(snapshot => {
