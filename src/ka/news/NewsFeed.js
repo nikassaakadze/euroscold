@@ -1,0 +1,46 @@
+import React, {useState} from 'react'
+import '../../styles/news.css'
+import NewsCard from './NewsCard'
+import {db} from '../../util/firebase'
+import { Link } from 'react-router-dom'
+
+function NewsFeed() {
+
+  const [news, setNews] = useState([])
+
+  const newsId = "Xa4X7v09Els0nqpAC4iO"
+
+  React.useEffect(() => {
+    db.collection("news").doc(newsId).collection("news").onSnapshot(snapshot => {
+      setNews(snapshot.docs.map(doc => ({
+        id: doc.id,
+        news: doc.data()
+      })))
+    })
+  },[])
+
+  return (
+    <div className="news__feed">
+      <div className="news__feed__inner">
+      <div className="feed__headline">
+          <div className="feed__name">
+          <div className="line"></div>
+          <h2>სიახლეები</h2>
+            <div className="line"></div>
+          </div>
+        </div>
+        <div className="news__cards">
+          {
+            news && news.map(({news, id}) => (
+              <Link to={`/news/${newsId}/${id}`}>
+                <NewsCard headline={news.headline} hero={news.hero} key={id} />
+              </Link>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default NewsFeed

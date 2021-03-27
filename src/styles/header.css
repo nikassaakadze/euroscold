@@ -1,0 +1,116 @@
+.header__wrapper{
+    position: sticky;
+    top: 0;
+    z-index: 1400;
+    height: 50px;
+    background-color:#2C3E50;
+    border-top: 1px solid rgba(255, 255, 255, 0.377);
+}
+.header__inner{
+    width: 80%;
+    margin: auto;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ant-drawer, .ant-drawer-right, .ant-drawer-open{
+    z-index: 2000 !important;
+}
+ul{
+    margin-bottom: 0 !important;
+}
+.header__left ul :first-child{
+    margin-left: 0 !important;
+}
+.header__left ul{
+    padding-top: 5px;
+}
+.header__left ul li{
+    margin-left: 40px;
+}
+.header__left ul li span{
+    font-weight: bold;
+    color: white;
+}
+.header__infolist{
+    display: flex;
+    align-items: center;
+}
+.header__infolist :last-child{
+    margin-right: 0;
+}
+.infoItem{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.infoItem .MuiSvgIcon-root{
+    color: white;
+    font-size: 17px;
+}
+.infoItem span{
+    color: white;
+    margin-left: 5px;
+}
+
+.header__burger{
+    display: none;
+}
+.responsive__avlist ul{
+    display: flex;
+    flex-direction: column;
+}
+.responsive__avlist ul li{
+    margin-top: 30px;
+}
+
+
+
+@media (max-width: 700px){
+    .header__inner{
+        width: 100%;
+    }
+    .header__burger{
+        display: block;
+    }
+    .header__burger .MuiSvgIcon-root{
+        color: white;
+        font-size: 30px;
+    }
+    .infoItem span{
+        display: none;
+    }
+    .header__left{
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: #006740;
+        width: 0px;
+        visibility: hidden;
+    }
+    .header__left ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .language span{
+        display: none;
+    }
+    .topbar__wrapper{
+        height: 50px;
+    }
+    .logo a img{
+        height: 50px !important;
+    }
+    .cards{
+        grid-template-columns: none;
+    }
+    .news__cards{
+        grid-template-columns: none !important;
+    }
+    .feed__inner, .news__feed__inner{
+        width: 100%;
+    }
+}

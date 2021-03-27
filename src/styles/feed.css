@@ -1,0 +1,110 @@
+.feed{
+    /* background: #FEF9E7; */
+    padding: 50px 0;
+}
+.feed__inner{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+.cards{
+    width: 100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(24%, 1fr));
+    grid-gap: 1rem ;
+}
+.card{
+    width: 100%;
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    background-color:#ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card__hero{
+    width: 100%;
+    height: 290px;
+    position: relative;
+    /* background-image: url("https://steamuserimages-a.akamaihd.net/ugc/102855182612440410/CA0D03FD2C7438BE09B78909C47484A6B135A430/") */
+    /* background-image: linear-gradient( 102.1deg,  rgba(96,221,142,1) 8.7%, rgba(24,138,141,1) 88.1% ); */
+    background-image: radial-gradient( circle 1224px at 10.6% 8.8%,  rgba(255,255,255,1) 0%, rgba(153,202,251,1) 100.2% );}
+.card__hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.seeprod{
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: whitesmoke;
+    cursor: pointer;
+    visibility: hidden;
+    color: #222;
+    font-weight: bold;
+}
+.feed__name{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feed__name h2{
+    font-size: 20px;
+    color: #2C3E50;
+    margin: 0 30px;
+}
+.line{
+    flex: 1;
+    height: 1px;
+    background: #2C3E5055;
+}
+.cards{
+    margin-top: 40px;
+}
+.card__footer{
+    padding: 10px;
+}
+.card :hover .seeprod{
+    visibility: visible;
+}
+.product__name{
+    width: 100%;
+    text-align: center;
+}
+.product__name h4{
+    color: rgb(26, 26, 26);
+    margin-bottom: 0 !important;
+    font-size: 20px;
+}
+.seeAll{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.seeFullBtn{
+    width: 150px;
+    height: 40px;
+    background: #2C3E50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 3px;
+    padding-top: 5px;
+}
+.allProd{
+    padding-top: 50px;
+}
+
+.related{
+    background: none !important;
+}

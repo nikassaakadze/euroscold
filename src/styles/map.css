@@ -1,0 +1,9 @@
+.mapboxgl-ctrl-logo, .mapboxgl-ctrl.mapboxgl-ctrl-attrib{
+display: none !important;
+}
+
+@media (max-width: 700px){
+    .map{
+        height: 200px !important;
+    }
+}

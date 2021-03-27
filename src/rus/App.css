@@ -1,0 +1,16 @@
+@font-face{
+  font-family: georgian;
+  src: url("../assets/fonts/archyedt-bold-webfont.ttf");
+}
+@import url("//cdn.web-fonts.ge/fonts/bpg-banner-supersquare-caps/css/bpg-banner-supersquare-caps.min.css");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BPG Banner SuperSquare Caps", sans-serif;
+}
+li, a{
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+}
